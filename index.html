@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Shufflr</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ddb264611c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="player">
+        <div id="details">
+            <div id="detailsInfo">
+                <div id="shadow"></div>
+                <img id="albumArtwork" src="assets/artwork/musicplayer_albumartwork-example.png" alt="album artwork" height="79" width="79">
+                <div id="info">
+                    <p id="songTitle">Song Title</p>
+                    <p id="artistName">Artist Name</p>
+                    <progress id="trackProgress" value="0" max="100"></progress>
+                </div>
+            </div>
+            <div id="detailsBackground"></div>
+        </div>  
+        <div id="volume">
+            <div id="volumeInfo">
+                <input id="slider" type="range" value="50" oninput="SetVolume(this.value)" onchange="SetVolume(this.value)">
+            </div>
+            <div id="volumeBackground"></div>
+        </div>
+        <div id="main">
+            <ul id="mainButtons">
+                <li class="mainButtonsLi" onclick="previous()">
+                    <i id="previousButton" class="fas fa-step-backward"></i>
+                </li>
+                <li class="mainButtonsLi" onclick="playPause()">
+                    <i id="playButton" class="fas fa-play"></i>
+                </li>
+                <li class="mainButtonsLi" onclick="next()">
+                    <i id="nextButton" class="fas fa-step-forward"></i>
+                </li>
+            </ul>
+        </div>
+        <i class="fas fa-volume-up" onclick="volumePanelTrigger()"></i>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.4/gsap.min.js"></script>
+    <script src="script2.js"></script>
+    <!-- this is a comment in html-->
+</body>
+</body>
+</html>
